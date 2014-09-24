@@ -1,0 +1,415 @@
+/home/derek/.rbenv/versions/2.1.2/bin/ruby extconf.rb 
+The Gosu gem requires some libraries to be installed system-wide.
+See the following site for a list:
+https://github.com/jlnr/gosu/wiki/Getting-Started-on-Linux
+
+checking for TTF_RenderUTF8_Blended() in -lSDL2_ttf... yes
+checking for SDL_ttf.h... yes
+checking for FreeImage_ConvertFromRawBits() in -lfreeimage... yes
+checking for FreeImage.h... yes
+checking for main() in -lopenal... yes
+checking for AL/al.h... yes
+creating Makefile
+
+make "DESTDIR=" clean
+
+make "DESTDIR="
+compiling gosu_wrap.cxx
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from /home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby.h:33:0,
+                 from gosu_wrap.cxx:850:
+gosu_wrap.cxx: In function ‘void Gosu::loadBitmap(Gosu::Bitmap&, VALUE)’:
+/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/ruby.h:844:31: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+      RSTRING(str)->as.heap.len)
+                               ^
+gosu_wrap.cxx:2298:56: note: in expansion of macro ‘RSTRING_LEN’
+         else if (width * height * 4 * sizeof(float) == RSTRING_LEN(blob))
+                                                        ^
+gosu_wrap.cxx: In member function ‘virtual void SwigDirector_Window::update()’:
+gosu_wrap.cxx:2890:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   VALUE result;
+         ^
+gosu_wrap.cxx: In member function ‘virtual void SwigDirector_Window::draw()’:
+gosu_wrap.cxx:2897:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   VALUE result;
+         ^
+gosu_wrap.cxx: In member function ‘virtual void SwigDirector_Window::loseFocus()’:
+gosu_wrap.cxx:2934:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   VALUE result;
+         ^
+gosu_wrap.cxx: In member function ‘virtual void SwigDirector_Window::releaseMemory()’:
+gosu_wrap.cxx:2941:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   VALUE result;
+         ^
+gosu_wrap.cxx: In member function ‘virtual void SwigDirector_Window::buttonDown(Gosu::Button)’:
+gosu_wrap.cxx:2949:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   VALUE result;
+         ^
+gosu_wrap.cxx: In member function ‘virtual void SwigDirector_Window::buttonUp(Gosu::Button)’:
+gosu_wrap.cxx:2963:9: warning: variable ‘result’ set but not used [-Wunused-but-set-variable]
+   VALUE result;
+         ^
+compiling IO.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Graphics-Resolution.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Math.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Graphics-Transform.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Graphics/Transform.cpp:6:0,
+                 from Graphics-Transform.cpp:1:
+../../src/Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+compiling Text-TextUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from Text-TextUnix.cpp:1:0:
+../../src/Text/TextUnix.cpp: In member function ‘unsigned int Gosu::PangoRenderer::textWidth(const wstring&, const wstring&, unsigned int, unsigned int)’:
+../../src/Text/TextUnix.cpp:57:13: warning: ‘void g_type_init()’ is deprecated (declared at /usr/include/glib-2.0/gobject/gtype.h:667) [-Wdeprecated-declarations]
+             g_type_init();
+             ^
+../../src/Text/TextUnix.cpp:57:25: warning: ‘void g_type_init()’ is deprecated (declared at /usr/include/glib-2.0/gobject/gtype.h:667) [-Wdeprecated-declarations]
+             g_type_init();
+                         ^
+../../src/Text/TextUnix.cpp:61:23: warning: ‘PangoContext* pango_ft2_get_context(double, double)’ is deprecated (declared at /usr/include/pango-1.0/pango/pangoft2.h:111): Use 'pango_font_map_create_context' instead [-Wdeprecated-declarations]
+             context = pango_ft2_get_context(dpi_x, dpi_y);
+                       ^
+../../src/Text/TextUnix.cpp:61:57: warning: ‘PangoContext* pango_ft2_get_context(double, double)’ is deprecated (declared at /usr/include/pango-1.0/pango/pangoft2.h:111): Use 'pango_font_map_create_context' instead [-Wdeprecated-declarations]
+             context = pango_ft2_get_context(dpi_x, dpi_y);
+                                                         ^
+../../src/Text/TextUnix.cpp: In member function ‘void Gosu::PangoRenderer::drawText(Gosu::Bitmap&, const wstring&, int, int, Gosu::Color, const wstring&, unsigned int, unsigned int)’:
+../../src/Text/TextUnix.cpp:146:59: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if (y + y2 < 0 || y + y2 >= bitmap.height())
+                                                           ^
+../../src/Text/TextUnix.cpp:151:62: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     if (x + x2 < 0 || x + x2 >= bitmap.width())
+                                                              ^
+compiling Input-TextInput.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Inspection.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Bitmap-Bitmap.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Input-Input.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from Input-Input.cpp:1:0:
+../../src/Input/Input.cpp: In member function ‘void Gosu::Input::Impl::pollGamepads()’:
+../../src/Input/Input.cpp:73:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int i = 0; i < joysticks.size(); ++i) {
+                                            ^
+../../src/Input/Input.cpp:118:53: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int j = 0; j < currentGamepad.size(); ++j) {
+                                                     ^
+../../src/Input/Input.cpp:132:45: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int j = 0; j < anyGamepad.size(); ++j) {
+                                             ^
+../../src/Input/Input.cpp: In member function ‘bool Gosu::Input::feedSDLEvent(void*)’:
+../../src/Input/Input.cpp:176:65: warning: comparison between ‘const enum SDL_Scancode’ and ‘enum Gosu::ButtonName’ [-Wenum-compare]
+             if (e->key.repeat == 0 && e->key.keysym.scancode <= kbRangeEnd) {
+                                                                 ^
+compiling Text-Font.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Text/Font.cpp:7:0,
+                 from Text-Font.cpp:1:
+../../src/Text/../Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Text/../Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Text/../Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+In file included from ../../src/Text/Font.cpp:8:0,
+                 from Text-Font.cpp:1:
+../../src/Text/FormattedString.hpp: In constructor ‘Gosu::FormattedString::FormattedString(const wchar_t*, unsigned int)’:
+../../src/Text/FormattedString.hpp:179:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                         if (endOfEntity >= len)
+                                            ^
+../../src/Text/FormattedString.hpp: In member function ‘std::wstring Gosu::FormattedString::unformat() const’:
+../../src/Text/FormattedString.hpp:203:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < characters.size(); ++i)
+                                                 ^
+compiling Graphics-LargeImageData.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Graphics/LargeImageData.cpp:2:0,
+                 from Graphics-LargeImageData.cpp:1:
+../../src/Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+In file included from Graphics-LargeImageData.cpp:1:0:
+../../src/Graphics/LargeImageData.cpp: In member function ‘virtual Gosu::Bitmap Gosu::LargeImageData::toBitmap() const’:
+../../src/Graphics/LargeImageData.cpp:123:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int x = 0; x < partsX; ++x)
+                         ^
+../../src/Graphics/LargeImageData.cpp:124:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < partsY; ++y)
+                             ^
+../../src/Graphics/LargeImageData.cpp: In member function ‘virtual void Gosu::LargeImageData::insert(const Gosu::Bitmap&, int, int)’:
+../../src/Graphics/LargeImageData.cpp:131:25: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int x = 0; x < partsX; ++x)
+                         ^
+../../src/Graphics/LargeImageData.cpp:132:29: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < partsY; ++y)
+                             ^
+In file included from ../../Gosu/ImageData.hpp:7:0,
+                 from ../../src/Graphics/LargeImageData.hpp:5,
+                 from ../../src/Graphics/LargeImageData.cpp:1,
+                 from Graphics-LargeImageData.cpp:1:
+../../Gosu/Color.hpp: In function ‘Gosu::Color {anonymous}::ipl(Gosu::Color, Gosu::Color, double)’:
+../../Gosu/Color.hpp:101:43: warning: ‘result.Gosu::Color::rep’ is used uninitialized in this function [-Wuninitialized]
+             rep &= ~(0xff << ALPHA_OFFSET);
+                                           ^
+In file included from Graphics-LargeImageData.cpp:1:0:
+../../src/Graphics/LargeImageData.cpp:72:21: note: ‘result.Gosu::Color::rep’ was declared here
+         Gosu::Color result;
+                     ^
+compiling Graphics-Graphics.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Graphics/Graphics.cpp:2:0,
+                 from Graphics-Graphics.cpp:1:
+../../src/Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+In file included from ../../src/Graphics/Graphics.cpp:3:0,
+                 from Graphics-Graphics.cpp:1:
+../../src/Graphics/DrawOp.hpp: In member function ‘void Gosu::DrawOp::perform(const Gosu::DrawOp*) const’:
+../../src/Graphics/DrawOp.hpp:111:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (unsigned i = 0; i < verticesOrBlockIndex; i++)
+                                      ^
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from ../../src/Graphics/DrawOpQueue.hpp:9,
+                 from ../../src/Graphics/Macro.hpp:9,
+                 from ../../src/Graphics/Graphics.cpp:7,
+                 from Graphics-Graphics.cpp:1:
+../../src/Graphics/DrawOpQueue.hpp: In member function ‘void Gosu::DrawOpQueue::performDrawOpsAndCode()’:
+../../src/Graphics/DrawOpQueue.hpp:131:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 assert (blockIndex < glBlocks.size());
+                                                    ^
+compiling FileUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from FileUnix.cpp:1:0:
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::resize(std::size_t)’:
+../../src/FileUnix.cpp:76:34: warning: ignoring return value of ‘int ftruncate(int, __off_t)’, declared with attribute warn_unused_result [-Wunused-result]
+     ftruncate(pimpl->fd, newSize);
+                                  ^
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::read(std::size_t, std::size_t, void*) const’:
+../../src/FileUnix.cpp:91:42: warning: ignoring return value of ‘ssize_t read(int, void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+     ::read(pimpl->fd, destBuffer, length);
+                                          ^
+../../src/FileUnix.cpp: In member function ‘virtual void Gosu::File::write(std::size_t, std::size_t, const void*)’:
+../../src/FileUnix.cpp:99:45: warning: ignoring return value of ‘ssize_t write(int, const void*, size_t)’, declared with attribute warn_unused_result [-Wunused-result]
+     ::write(pimpl->fd, sourceBuffer, length);
+                                             ^
+compiling Text-Text.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Text/Text.cpp:8:0,
+                 from Text-Text.cpp:1:
+../../src/Text/../Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Text/../Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Text/../Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+In file included from ../../src/Text/Text.cpp:9:0,
+                 from Text-Text.cpp:1:
+../../src/Text/FormattedString.hpp: In constructor ‘Gosu::FormattedString::FormattedString(const wchar_t*, unsigned int)’:
+../../src/Text/FormattedString.hpp:179:44: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                         if (endOfEntity >= len)
+                                            ^
+../../src/Text/FormattedString.hpp: In member function ‘std::wstring Gosu::FormattedString::unformat() const’:
+../../src/Text/FormattedString.hpp:203:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < characters.size(); ++i)
+                                                 ^
+In file included from Text-Text.cpp:1:0:
+../../src/Text/Text.cpp: In member function ‘void Gosu::{anonymous}::TextBlockBuilder::addLine(std::vector<Gosu::{anonymous}::WordInfo>::const_iterator, std::vector<Gosu::{anonymous}::WordInfo>::const_iterator, unsigned int, bool)’:
+../../src/Text/Text.cpp:150:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                     for (int i = 0; i < parts.size(); ++i)
+                                                    ^
+../../src/Text/Text.cpp: In function ‘void Gosu::{anonymous}::processText(Gosu::{anonymous}::TextBlockBuilder&, const Gosu::FormattedString&)’:
+../../src/Text/Text.cpp:296:49: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int i = 0; i < paragraphs.size(); ++i)
+                                                 ^
+../../src/Text/Text.cpp: In function ‘Gosu::Bitmap Gosu::createText(const wstring&, const wstring&, unsigned int, unsigned int)’:
+../../src/Text/Text.cpp:336:36: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     for (int i = 0; i < lines.size(); ++i)
+                                    ^
+../../src/Text/Text.cpp:343:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int p = 0; p < parts.size(); ++p)
+                                        ^
+compiling DirectoriesUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling TimingUnix.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Window.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Utility.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from Utility.cpp:1:0:
+../../src/Utility.cpp: In function ‘bool Gosu::isExtension(const wchar_t*, const wchar_t*)’:
+../../src/Utility.cpp:113:48: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             if (towlower((wint_t)*--str) != *--ext)
+                                                ^
+compiling Graphics-Image.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Graphics-BlockAllocator.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Bitmap-BitmapColorKey.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Bitmap-BitmapFreeImage.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Graphics-TexChunk.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Graphics/TexChunk.hpp:7:0,
+                 from ../../src/Graphics/TexChunk.cpp:1,
+                 from Graphics-TexChunk.cpp:1:
+../../src/Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+In file included from ../../src/Graphics/DrawOpQueue.hpp:8:0,
+                 from ../../src/Graphics/TexChunk.cpp:3,
+                 from Graphics-TexChunk.cpp:1:
+../../src/Graphics/DrawOp.hpp: In member function ‘void Gosu::DrawOp::perform(const Gosu::DrawOp*) const’:
+../../src/Graphics/DrawOp.hpp:111:38: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (unsigned i = 0; i < verticesOrBlockIndex; i++)
+                                      ^
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from ../../src/Graphics/DrawOpQueue.hpp:9,
+                 from ../../src/Graphics/TexChunk.cpp:3,
+                 from Graphics-TexChunk.cpp:1:
+../../src/Graphics/DrawOpQueue.hpp: In member function ‘void Gosu::DrawOpQueue::performDrawOpsAndCode()’:
+../../src/Graphics/DrawOpQueue.hpp:131:52: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 assert (blockIndex < glBlocks.size());
+                                                    ^
+In file included from Graphics-TexChunk.cpp:1:0:
+../../src/Graphics/TexChunk.cpp: In member function ‘virtual void Gosu::TexChunk::insert(const Gosu::Bitmap&, int, int)’:
+../../src/Graphics/TexChunk.cpp:90:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (x < 0 || y < 0 || x + original.width() > w || y + original.height() > h)
+                                                  ^
+../../src/Graphics/TexChunk.cpp:90:79: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (x < 0 || y < 0 || x + original.width() > w || y + original.height() > h)
+                                                                               ^
+compiling Graphics-Texture.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Graphics/Texture.hpp:7:0,
+                 from ../../src/Graphics/Texture.cpp:2,
+                 from Graphics-Texture.cpp:1:
+../../src/Graphics/Common.hpp: In function ‘void Gosu::multiplyBitmapAlpha(Gosu::Bitmap&, Gosu::Color::Channel)’:
+../../src/Graphics/Common.hpp:104:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+         for (int y = 0; y < bmp.height(); ++y)
+                                        ^
+../../src/Graphics/Common.hpp:105:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             for (int x = 0; x < bmp.width(); ++x)
+                                           ^
+compiling Graphics-Color.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+compiling Audio-AudioOpenAL.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from ../../src/Audio/AudioOpenAL.cpp:1:0,
+                 from Audio-AudioOpenAL.cpp:1:
+../../src/Audio/ALChannelManagement.hpp: In member function ‘std::pair<int, int> Gosu::ALChannelManagement::reserveChannel()’:
+../../src/Audio/ALChannelManagement.hpp:73:41: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if (currentTokens[i] == NO_TOKEN)
+                                         ^
+../../src/Audio/ALChannelManagement.hpp: In member function ‘int Gosu::ALChannelManagement::sourceIfStillPlaying(int, int) const’:
+../../src/Audio/ALChannelManagement.hpp:87:73: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+             if (channel != NO_FREE_CHANNEL && currentTokens[channel] == token)
+                                                                         ^
+In file included from ../../src/Audio/OggFile.hpp:4:0,
+                 from ../../src/Audio/AudioOpenAL.cpp:2,
+                 from Audio-AudioOpenAL.cpp:1:
+../../src/Audio/AudioFile.hpp: In member function ‘const std::vector<char>& Gosu::AudioFile::decodedData()’:
+../../src/Audio/AudioFile.hpp:41:33: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+                 if (readBytes < INCREMENT)
+                                 ^
+In file included from Audio-AudioOpenAL.cpp:1:0:
+../../src/Audio/AudioOpenAL.cpp: In member function ‘bool Gosu::SampleInstance::playing() const’:
+../../src/Audio/AudioOpenAL.cpp:79:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘bool Gosu::SampleInstance::paused() const’:
+../../src/Audio/AudioOpenAL.cpp:89:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘void Gosu::SampleInstance::pause()’:
+../../src/Audio/AudioOpenAL.cpp:99:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘void Gosu::SampleInstance::resume()’:
+../../src/Audio/AudioOpenAL.cpp:107:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘void Gosu::SampleInstance::stop()’:
+../../src/Audio/AudioOpenAL.cpp:118:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘void Gosu::SampleInstance::changeVolume(double)’:
+../../src/Audio/AudioOpenAL.cpp:126:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘void Gosu::SampleInstance::changePan(double)’:
+../../src/Audio/AudioOpenAL.cpp:134:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+../../src/Audio/AudioOpenAL.cpp: In member function ‘void Gosu::SampleInstance::changeSpeed(double)’:
+../../src/Audio/AudioOpenAL.cpp:143:40: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (source == ALChannelManagement::NO_SOURCE)
+                                        ^
+In file included from /usr/include/c++/4.8/cassert:43:0,
+                 from ../../src/Audio/AudioOpenAL.cpp:10,
+                 from Audio-AudioOpenAL.cpp:1:
+../../src/Audio/AudioOpenAL.cpp: In member function ‘Gosu::SampleInstance Gosu::Sample::playPan(double, double, double, bool) const’:
+../../src/Audio/AudioOpenAL.cpp:226:43: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     assert(source != ALChannelManagement::NO_SOURCE);
+                                           ^
+compiling Bitmap-BitmapUtils.cpp
+cc1plus: warning: command line option ‘-Wdeclaration-after-statement’ is valid for C/ObjC but not for C++ [enabled by default]
+cc1plus: warning: command line option ‘-Wimplicit-function-declaration’ is valid for C/ObjC but not for C++ [enabled by default]
+linking shared-object gosu.so
+
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 gosu.so ./.gem.20140924-16560-1invpdx
+installing default gosu libraries

@@ -1,0 +1,255 @@
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lGL     -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lGL     -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for gl
+cflags: -I/usr/include/libdrm
+ldflags: 
+libs: -lGL
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lSDL2     -lGL -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for sdl2
+cflags: -D_REENTRANT -I/usr/include/SDL2
+ldflags: 
+libs: -lSDL2
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype     -lGL -lSDL2 -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for pangoft2
+cflags: -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+ldflags: 
+libs: -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lvorbisfile -lvorbis -lm -logg     -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for vorbisfile
+cflags: 
+ldflags: 
+libs: -lvorbisfile -lvorbis -lm -logg
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include  conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lopenal     -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for openal
+cflags: 
+ldflags: 
+libs: -lopenal
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include   conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -lsndfile     -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+package configuration for sndfile
+cflags: 
+ldflags: 
+libs: -lsndfile
+
+have_library: checking for TTF_RenderUTF8_Blended() in -lSDL2_ttf... -------------------- yes
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include    conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -L. -L/home/derek/.rbenv/versions/2.1.2/lib  -fstack-protector -rdynamic -Wl,-export-dynamic           -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘TTF_RenderUTF8_Blended’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))TTF_RenderUTF8_Blended; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))TTF_RenderUTF8_Blended; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))TTF_RenderUTF8_Blended; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include    conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -L. -L/home/derek/.rbenv/versions/2.1.2/lib  -fstack-protector -rdynamic -Wl,-export-dynamic           -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘TTF_RenderUTF8_Blended’ [-Wimplicit-function-declaration]
+ int t(void) { TTF_RenderUTF8_Blended(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { TTF_RenderUTF8_Blended(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for SDL_ttf.h... -------------------- yes
+
+"gcc -E -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <SDL_ttf.h>
+/* end */
+
+--------------------
+
+have_library: checking for FreeImage_ConvertFromRawBits() in -lfreeimage... -------------------- yes
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include    conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -L. -L/home/derek/.rbenv/versions/2.1.2/lib  -fstack-protector -rdynamic -Wl,-export-dynamic          -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static -lfreeimage -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:57: error: ‘FreeImage_ConvertFromRawBits’ undeclared (first use in this function)
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))FreeImage_ConvertFromRawBits; return 0; }
+                                                         ^
+conftest.c:13:57: note: each undeclared identifier is reported only once for each function it appears in
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))FreeImage_ConvertFromRawBits; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))FreeImage_ConvertFromRawBits; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include    conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -L. -L/home/derek/.rbenv/versions/2.1.2/lib  -fstack-protector -rdynamic -Wl,-export-dynamic          -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static -lfreeimage -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:1: warning: implicit declaration of function ‘FreeImage_ConvertFromRawBits’ [-Wimplicit-function-declaration]
+ int t(void) { FreeImage_ConvertFromRawBits(); return 0; }
+ ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { FreeImage_ConvertFromRawBits(); return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for FreeImage.h... -------------------- yes
+
+"gcc -E -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <FreeImage.h>
+/* end */
+
+--------------------
+
+have_library: checking for main() in -lopenal... -------------------- yes
+
+"gcc -o conftest -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include    conftest.c  -L. -L/home/derek/.rbenv/versions/2.1.2/lib -Wl,-R/home/derek/.rbenv/versions/2.1.2/lib -L. -L/home/derek/.rbenv/versions/2.1.2/lib  -fstack-protector -rdynamic -Wl,-export-dynamic          -lfreeimage -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -Wl,-R -Wl,/home/derek/.rbenv/versions/2.1.2/lib -L/home/derek/.rbenv/versions/2.1.2/lib -lruby-static -lopenal -lfreeimage -lSDL2_ttf  -lGL -lSDL2 -lpangoft2-1.0 -lpango-1.0 -lfontconfig -lgobject-2.0 -lglib-2.0 -lfreetype -lvorbisfile -lvorbis -lm -logg -lopenal -lsndfile -lpthread -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:13:32: warning: variable ‘p’ set but not used [-Wunused-but-set-variable]
+ int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+                                ^
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+--------------------
+
+have_header: checking for AL/al.h... -------------------- yes
+
+"gcc -E -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/x86_64-linux -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0/ruby/backward -I/home/derek/.rbenv/versions/2.1.2/include/ruby-2.1.0 -I. -I../.. -I../../src -I/home/derek/.rbenv/versions/2.1.2/include     -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -DGOSU_DEPRECATED= -I/usr/include/libdrm -D_REENTRANT -I/usr/include/SDL2 -pthread -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include     conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <AL/al.h>
+/* end */
+
+--------------------
+
