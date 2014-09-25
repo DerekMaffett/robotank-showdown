@@ -3,26 +3,32 @@ require 'rrobots'
 class Sciencebot
   include Robot
 
+  # FIXME: Firing should not be directly linked to the radar or it's not much
+  # better than the previous algorithm. Instead, use fast radar scans to
+  # keep the enemy in sight and aim narrowly near the middle of the scans.
+
+  # FIXME: Moving should be not a circular dodge but rather a serpentine
+  # pattern backwards from the location of the enemy.
+
+  # FIXME: Firing cone size should be dependent on the distance from the enemy?
+
   def initialize
     @tick_turns = { body: 0, gun: 0, radar: 0 }
-    @radar_scan_step_size = 10
+    @radar_scan_step_size = 12
     @radar_sweep_step_size = 40
     # @search_counter = 0
     # @maximum_enemy_missing_time = 100
     # @detected_values = []
     # @radar_range = (-30..30).to_a
-    @absolute_firing_range = 2
-    @spray_range = (-@absolute_firing_range..@absolute_firing_range).to_a
+    @gun_random_component = 2
+    @spray_range = (-@gun_random_component..@gun_random_component).to_a
   end
 
   def tick(events)
     combat_mode_or_sweep(events)
-
+    dodge
+    science!
     final_commands
-    # science!
-    # store_enemy_location_probability(events)
-    # dodge
-    # combat_or_search
   end
 
   def final_commands
@@ -96,7 +102,7 @@ class Sciencebot
     gun_turn_degrees = @spray_range.sample - difference
     @tick_turns[:gun] += gun_turn_degrees
     @tick_turns[:radar] -= gun_turn_degrees
-    fire 0.5
+    fire 0.1
   end
 
 
@@ -111,9 +117,9 @@ class Sciencebot
   #   end
   # end
 
-  # def science!
-  #   say('Burn them with SCIENCE!')
-  # end
+  def science!
+    say('Burn them with SCIENCE!')
+  end
 
   # def enemy_eliminated?
   #   if @search_counter > @maximum_enemy_missing_time
@@ -150,9 +156,9 @@ class Sciencebot
   #   @detected_values.shift if @detected_values.size > 20
   # end
 
-  # def dodge
-  #   accelerate 1
-  #   turn 5
-  #   turn_gun -5
-  # end
+  def dodge
+    accelerate 1
+    @tick_turns[:body] += 5
+    @tick_turns[:gun] -= 5
+  end
 end
