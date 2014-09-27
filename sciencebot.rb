@@ -1,5 +1,6 @@
 require 'rrobots'
 
+# SCIENCE!
 class Sciencebot
   include Robot
 
@@ -28,10 +29,10 @@ class Sciencebot
     combat_mode_or_sweep(events)
     dodge
     science!
-    final_commands
+    execute_turns
   end
 
-  def final_commands
+  def execute_turns
     turn @tick_turns[:body]
     turn_gun @tick_turns[:gun]
     turn_radar @tick_turns[:radar]
@@ -44,7 +45,7 @@ class Sciencebot
       fire_at_area
     else
       radar_sweep
-      puts "I'm doing a sweep"
+      # puts "I'm doing a sweep"
     end
   end
 
@@ -58,7 +59,7 @@ class Sciencebot
   end
 
   def target_lost(events)
-    true if (@scan_status == 'found' && no_robot_detected?(events))
+    true if @scan_status == 'found' && no_robot_detected?(events)
   end
 
   def toggle_scan_direction
@@ -74,7 +75,7 @@ class Sciencebot
   def continue_scan(events)
     @scan_status = 'found' if robot_detected?(events)
     # p events
-    puts @scan_status
+    # puts @scan_status
     if @scan_direction == 'positive'
       @tick_turns[:radar] += @radar_scan_step_size
       puts "scanning up"
