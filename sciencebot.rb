@@ -13,21 +13,23 @@ class Sciencebot
 
   # FIXME: Firing cone size should be dependent on the distance from the enemy?
 
+  # FIXME: Calculated enemy location still has problems with 360 degrees
+  # wrapping.
+
   def initialize
     @tick_turns = { body: 0, gun: 0, radar: 0 }
-    @radar_scan_step_size = 12
+    @radar_scan_step_size = 7
     @radar_sweep_step_size = 40
     # @search_counter = 0
     # @maximum_enemy_missing_time = 100
-    # @detected_values = []
-    # @radar_range = (-30..30).to_a
-    @gun_random_component = 2
+    @enemy_sightings = []
+    @gun_random_component = 10
+    @gun_correction_speed = 5
     @spray_range = (-@gun_random_component..@gun_random_component).to_a
   end
 
   def tick(events)
     combat_mode_or_sweep(events)
-    dodge
     science!
     execute_turns
   end
@@ -41,12 +43,20 @@ class Sciencebot
 
   def combat_mode_or_sweep(events)
     if @combat_mode ||= robot_detected?(events)
+      approximate_enemy_location(events)
       scanning_pass(events)
       fire_at_area
+      dodge
     else
       radar_sweep
-      # puts "I'm doing a sweep"
+      dodge
     end
+  end
+
+  def approximate_enemy_location(events)
+    @enemy_sightings << radar_heading if robot_detected?(events)
+    @enemy_sightings.shift if @enemy_sightings.size > @gun_correction_speed
+    @enemy_location = @enemy_sightings.inject(:+).to_f / @enemy_sightings.size
   end
 
   def scanning_pass(events)
@@ -74,8 +84,6 @@ class Sciencebot
 
   def continue_scan(events)
     @scan_status = 'found' if robot_detected?(events)
-    # p events
-    # puts @scan_status
     if @scan_direction == 'positive'
       @tick_turns[:radar] += @radar_scan_step_size
       puts "scanning up"
@@ -98,7 +106,6 @@ class Sciencebot
   end
 
   def fire_at_area
-    @enemy_location = radar_heading
     difference = gun_heading - @enemy_location
     gun_turn_degrees = @spray_range.sample - difference
     @tick_turns[:gun] += gun_turn_degrees
@@ -106,20 +113,12 @@ class Sciencebot
     fire 0.1
   end
 
-
-  # def combat_or_search
-  #   if @combat_mode ||= events['robot_scanned'].any?
-  #     # cache_gun_heading
-  #     radar_sweep
-  #     fire_at_area
-  #     enemy_eliminated?
-  #   else
-  #     search_mode
-  #   end
-  # end
-
   def science!
     say('Burn them with SCIENCE!')
+  end
+
+  def serpentine
+
   end
 
   # def enemy_eliminated?
