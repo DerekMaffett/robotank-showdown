@@ -1,3 +1,18 @@
+# Sciencebot
+
+These are the bots developed over a few hours in my Ruby on Rails Development
+Accelerator at Code Fellows. Sciencebot was the project I worked on with
+Mike Chen and [Reed Nelson-Saunders](https://github.com/reedns).
+I then spent some extra time afterwards
+improving the algorithms. The bot is meant to counteract evasive dodging by
+locating an enemy tank and shooting in a random pattern around that location.
+It proves to be a solid algorithm, but only works well at long range.
+
+Should I ever come back to this, future improvements would include improving
+the firing cone depending on range and a movement algorithm which sends the
+robot in the opposite direction of anything it detects, putting the chances most
+in its favor.
+
 Basic Repo for RoboTank Showdown!
 ==================================
     # Fork this repo, so you can submit your tank via PR
